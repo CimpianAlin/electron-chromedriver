@@ -20,7 +20,7 @@ var version = process.env.npm_package_config_chromedriver_version
   process.env.npm_config_chromedriver_version ||
   process.env.CHROMEDRIVER_VERSION ||
   process.env.chromedriver_version ||
-  '2.23'
+  '2.21'
 
 var config = {
   baseUrl: baseUrl,
