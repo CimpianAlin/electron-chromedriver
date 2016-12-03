@@ -9,23 +9,24 @@ var baseUrl = process.env.npm_config_electron_mirro ||
   process.env.npm_package_config_electron_mirror ||
   process.env.ELECTRON_MIRROR ||
   process.env.electron_mirror ||
-  'https://github.com/electron/electron/releases/download/v'
+  'https://github.com/brave/electron/releases/download/v'
 
 var proxy = process.env.NPM_CONFIG_HTTPS_PROXY ||
   process.env.npm_config_https_proxy ||
   process.env.NPM_CONFIG_PROXY ||
   process.env.npm_config_proxy
 
-var version = process.env.npm_package_config_chromedriver_version
+var version = process.env.npm_package_config_chromedriver_version ||
   process.env.npm_config_chromedriver_version ||
   process.env.CHROMEDRIVER_VERSION ||
   process.env.chromedriver_version ||
-  '2.21'
+  '2.23'
 
 var config = {
   baseUrl: baseUrl,
   // Sync minor version of package to minor version of Electron release
-  electron: versionSegments[0] + '.' + versionSegments[1] + '.0',
+  // electron: versionSegments[0] + '.' + versionSegments[1] + '.0',
+  electron: versionSegments[0] + '.' + versionSegments[1] + '.' + versionSegments[2],
   outputPath: path.join(__dirname, 'bin'),
   version: 'v' + version,
   proxy: proxy
