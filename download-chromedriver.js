@@ -4,7 +4,8 @@ var mkdirp = require('mkdirp')
 var path = require('path')
 var request = require('request')
 
-var versionSegments = require('./package').version.split('.')
+var versionSegments =
+  (process.env.npm_config_brave_electron_version || require('./package').version).split('.')
 var baseUrl = process.env.npm_config_electron_mirro ||
   process.env.npm_package_config_electron_mirror ||
   process.env.ELECTRON_MIRROR ||
