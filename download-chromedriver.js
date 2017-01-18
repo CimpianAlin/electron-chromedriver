@@ -37,7 +37,7 @@ function handleError (url, error) {
   if (!error) return
 
   var message = error.message || error
-  console.error('Downloading ' + url + ' failed: ' + message)
+  console.error('Downloading ' + url + ' failed: ' + message + '\nStack:\n' + new Error().stack)
   process.exit(1)
 }
 
