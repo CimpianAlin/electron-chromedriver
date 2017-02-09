@@ -10,7 +10,7 @@ var baseUrl = process.env.npm_config_electron_mirro ||
   process.env.npm_package_config_electron_mirror ||
   process.env.ELECTRON_MIRROR ||
   process.env.electron_mirror ||
-  'https://github.com/brave/electron/releases/download/v'
+  'https://github.com/brave/muon/releases/download/v'
 
 var proxy = process.env.NPM_CONFIG_HTTPS_PROXY ||
   process.env.npm_config_https_proxy ||
@@ -21,7 +21,7 @@ var version = process.env.npm_package_config_chromedriver_version ||
   process.env.npm_config_chromedriver_version ||
   process.env.CHROMEDRIVER_VERSION ||
   process.env.chromedriver_version ||
-  '2.23'
+  '2.25'
 
 var config = {
   baseUrl: baseUrl,
