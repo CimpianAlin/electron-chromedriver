@@ -21,7 +21,7 @@ var version = process.env.npm_package_config_chromedriver_version ||
   process.env.npm_config_chromedriver_version ||
   process.env.CHROMEDRIVER_VERSION ||
   process.env.chromedriver_version ||
-  '2.29'
+  '2.38'
 
 var config = {
   baseUrl: baseUrl,
